@@ -11,7 +11,12 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
+
+import { Marker } from "@/components/ui/marker";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const items = [
   { title: "หน้าแรก", url: "/", icon: Home },
@@ -49,6 +54,23 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <Marker variant="border" />
+
+        <div className="flex items-center gap-3 px-2 py-2">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>Sila</AvatarFallback>
+          </Avatar>
+
+          <div className="flex flex-col">
+            <span className="text-sm font-semibold">Sila</span>
+            <span className="mt-0.5 w-fit rounded-md border border-border px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+              STUDENT
+            </span>
+          </div>
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }

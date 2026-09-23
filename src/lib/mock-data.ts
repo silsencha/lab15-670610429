@@ -21,6 +21,13 @@ export const students: Student[] = [
     program: "ISNE",
     courses: ["269101", "261497"],
   },
+  {
+    studentId: "670610429",
+    firstName: "Sila",
+    lastName: "Sanapong",
+    program: "CPE",
+    courses: ["261207"],
+  },
 ];
 
 export const courses: Course[] = [
@@ -63,17 +70,22 @@ export const enrollments: Enrollment[] = [
     courseId: "261497",
     enrolledAt: "2026-09-15T16:45:00",
   },
+  {
+    studentId: "670610429",
+    courseId: "261207",
+    enrolledAt: "2026-09-13T14:15:00",
+  },
 ];
 
 // นักศึกษาที่ "ล็อกอินอยู่" — ไม่มีระบบ Login/Role ในแลปนี้ จึงกำหนดไว้ที่นี่ที่เดียว
-export const CURRENT_STUDENT_ID = "650610002";
+export const CURRENT_STUDENT_ID = "670610429";
 export const currentStudent = students.find(
   (s) => s.studentId === CURRENT_STUDENT_ID,
 )!;
 
 // ข้อมูลส่วนแสดงสถานะผู้ใช้ที่ Sidebar (ข้อ 5 ของโจทย์) — แก้เป็นชื่อเล่นและรูปของตัวเอง
 export const currentUser = {
-  nickname: "Cillian",
+  nickname: "Sila",
   role: "STUDENT" as "STUDENT" | "ADMIN",
   avatar: "/profile.svg", // วางรูปไว้ที่ public/
 };

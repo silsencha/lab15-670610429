@@ -31,6 +31,7 @@ type RegisterDialogProps = {
 
 export function RegisterDialog({
   courses,
+  student,
   enrolledCourseIds,
   onRegister,
 }: RegisterDialogProps) {
